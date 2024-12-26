@@ -8,7 +8,7 @@ const Home = () => {
       <section className="hero">
         <div className="hero-content">
           <h1>Unlock Your Full Potential</h1>
-          <p>Expert tutoring in Math, English, Computer Science, and more</p>
+          <p>Expert tutoring in Mathematics and Computer Science</p>
           <Link to="/contact" className="cta-button">Get Started</Link>
         </div>
       </section>
@@ -21,16 +21,8 @@ const Home = () => {
             <p>From algebra to calculus, we've got you covered</p>
           </div>
           <div className="subject-card">
-            <h3>English</h3>
-            <p>Literature, writing, and language arts</p>
-          </div>
-          <div className="subject-card">
             <h3>Computer Science</h3>
             <p>Programming, algorithms, and web development</p>
-          </div>
-          <div className="subject-card">
-            <h3>General Subjects</h3>
-            <p>Science, history, and more</p>
           </div>
         </div>
       </section>

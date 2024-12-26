@@ -7,18 +7,40 @@
   background: linear-gradient(135deg, #3498db, #2c3e50);
   color: white;
   text-align: center;
-  padding: 100px 50px;
+  padding: 80px 50px;
+  margin-bottom: 40px;
 }
 
 .about-header h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.about-header p {
+.about-header .subtitle {
   font-size: 1.5rem;
-  max-width: 600px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.mission-statement {
+  max-width: 800px;
   margin: 0 auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission-statement p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .team-section,
@@ -42,11 +64,14 @@
 }
 
 .founder-card {
-  text-align: center;
   background: white;
+  border-radius: 12px;
   padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,30 +112,27 @@
 }
 
 .founder-card .bio {
-  text-align: center;
+  text-align: left;
   flex-grow: 1;
   margin: 20px 0;
-  line-height: 1.8;
-  color: #4a5568;
+  line-height: 1.6;
+  color: #444;
   padding: 0 20px;
   display: flex;
   align-items: center;
 }
 
 .credentials {
-  width: 100%;
-  margin-top: auto;
-  padding: 20px;
+  margin-top: 20px;
+  padding: 15px;
   background: #f8f9fa;
   border-radius: 8px;
-  text-align: center;
 }
 
 .credentials p {
-  margin: 12px 0;
+  margin: 10px 0;
   color: #2c3e50;
   font-weight: 500;
-  font-size: 1.1rem;
 }
 
 .mission-section {
