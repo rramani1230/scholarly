@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
+  const form = useRef();
+  const [status, setStatus] = useState({ message: '', type: '' });
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,16 +21,26 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically handle the form submission
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    alert('Thank you for your message! We will get back to you soon.');
+    setStatus({ message: 'Sending...', type: 'info' });
+
+    emailjs.sendForm(
+      'Scholarly', 
+      'template_y3zc3hj', 
+      form.current,
+      'kgT1EVAkzr1Q_gNo-' 
+    )
+      .then((result) => {
+        setStatus({ message: 'Message sent successfully!', type: 'success' });
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      }, (error) => {
+        setStatus({ message: 'Failed to send message. Please try again.', type: 'error' });
+        console.error('EmailJS Error:', error);
+      });
   };
 
   return (
@@ -40,32 +53,39 @@ const Contact = () => {
       <div className="contact-content">
         <div className="contact-info">
           <div className="info-item">
-            <h3>Location</h3>
-            <p>123 Education Street</p>
-            <p>San Francisco, CA 94105</p>
+            <h3>Santa Clara Location</h3>
+            <p>1833 Garzoni Pl</p>
+            <p>Santa Clara, CA</p>
+            <p className="contact-number">(408) 806-8843</p>
+          </div>
+          
+          <div className="info-item">
+            <h3>San Francisco Location</h3>
+            <p>388 Fulton St #513</p>
+            <p>San Francisco, CA</p>
+            <p className="contact-number">(650) 495-4958</p>
+          </div>
+
+          <div className="info-item">
+            <h3>Hours</h3>
+            <p>Monday-Thursday: 6:00 PM - 9:00 PM</p>
+            <p>Saturday-Sunday: 9:00 AM - 2:00 PM</p>
           </div>
           
           <div className="info-item">
             <h3>Email</h3>
             <p>info@scholarly.com</p>
           </div>
-          
-          <div className="info-item">
-            <h3>Phone</h3>
-            <p>(555) 123-4567</p>
-          </div>
-
-          <div className="info-item">
-            <h3>Hours</h3>
-            <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
-            <p>Saturday: 10:00 AM - 4:00 PM</p>
-            <p>Sunday: Closed</p>
-          </div>
         </div>
 
         <div className="contact-form">
           <h2>Send us a Message</h2>
-          <form onSubmit={handleSubmit}>
+          {status.message && (
+            <div className={`status-message ${status.type}`}>
+              {status.message}
+            </div>
+          )}
+          <form ref={form} onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -113,7 +133,9 @@ const Contact = () => {
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-button">Send Message</button>
+            <button type="submit" className="submit-button">
+              Send Message
+            </button>
           </form>
         </div>
       </div>

@@ -61,7 +61,6 @@ const About = () => {
               <p>Teaching Assistant at Berkeley & UIUC</p>
               <p>5+ Years Industry Experience (Oracle, Amazon)</p>
               <p>Perfect Scores: SAT Math, SAT II Math, GRE</p>
-              <p>Top 1.5% in AMC 12</p>
               <p>Stratford School Alumni</p>
             </div>
           </div>
