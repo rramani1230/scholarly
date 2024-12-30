@@ -30,7 +30,7 @@ const About = () => {
               A UC Berkeley graduate with a diverse background spanning academia, startups, and industry leaders. Rohan brings unique insights 
               from his roles at Stanford research, Tesla's autonomous systems team, Apple's software division, and Amazon's cloud infrastructure. 
               Throughout his time at Berkeley, he served as a Teaching Assistant and tutor, developing his passion for making complex concepts 
-              accessible to students. His educational journey through Challenger School provides deep understanding of Bay Area education, allowing 
+              accessible to students with varying learning styles. His educational journey through Challenger School provides deep understanding of Bay Area education, allowing 
               him to create effective learning strategies for students.
             </p>
             <div className="credentials">
@@ -56,11 +56,10 @@ const About = () => {
               His educational journey through Stratford School provides unique insights into Bay Area education.
             </p>
             <div className="credentials">
-              <p>UC Berkeley - Applied Math & Data Science</p>
-              <p>UIUC - MS in Computer Science (AI Concentration)</p>
+              <p>UC Berkeley (BS) + UIUC (MS) Graduate</p>
               <p>Teaching Assistant at Berkeley & UIUC</p>
               <p>5+ Years Industry Experience (Oracle, Amazon)</p>
-              <p>Perfect Scores: SAT Math, SAT II Math, GRE</p>
+              <p>Perfect Scores: SAT Math, SAT II Math, GRE Math</p>
               <p>Stratford School Alumni</p>
             </div>
           </div>
@@ -71,20 +70,20 @@ const About = () => {
         <h2>Our Approach</h2>
         <div className="values-grid">
           <div className="value-card">
-            <h3>Industry-Informed Teaching</h3>
-            <p>We bring real-world examples from our tech industry experience to make learning relevant and engaging</p>
+            <h3>Practical Teaching</h3>
+            <p>Combining industry and academic expertise to provide a strong foundation balancing theoretical concepts and a real-world context</p>
           </div>
           <div className="value-card">
             <h3>Bay Area Expertise</h3>
-            <p>Deep understanding of local school systems and educational requirements</p>
+            <p>Deep understanding of local school systems and educational requirements, having graduated from and taught at Bay Area institutions</p>
           </div>
           <div className="value-card">
             <h3>Personalized Learning</h3>
-            <p>Customized curriculum based on each student's goals and learning style</p>
+            <p>Customized curriculum and teaching methods tailored to each student's goals, learning style, and pace of understanding</p>
           </div>
           <div className="value-card">
             <h3>Technical Excellence</h3>
-            <p>Strong foundation in Computer Science, Mathematics, and STEM subjects</p>
+            <p>Strong foundation in Computer Science and Mathematics, backed by perfect scores in standardized tests and industry achievements</p>
           </div>
         </div>
       </div>

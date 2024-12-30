@@ -6,41 +6,70 @@ const Home = () => {
   return (
     <div className="home">
       <section className="hero">
+        <div className="hero-background">
+          <div className="hero-overlay"></div>
+        </div>
         <div className="hero-content">
-          <h1>Unlock Your Full Potential</h1>
-          <p>Expert tutoring in Mathematics and Computer Science</p>
-          <Link to="/contact" className="cta-button">Get Started</Link>
+          <h1>
+            <span className="gradient-text typing-animation">Scholarly</span>
+            <span className="subtitle">Excellence in Education</span>
+          </h1>
+          <p>Expert tutoring in Mathematics and Computer Science from Berkeley graduates</p>
+          <Link to="/contact" className="cta-button">Get Started Today</Link>
         </div>
       </section>
 
       <section className="subjects">
-        <h2>Our Subjects</h2>
+        <h2>Our Focus Areas</h2>
         <div className="subjects-grid">
           <div className="subject-card">
+            <div className="subject-icon math-icon">∑</div>
             <h3>Mathematics</h3>
-            <p>From algebra to calculus, we've got you covered</p>
+            <ul>
+             <li>Algebra & Geometry</li>
+              <li>Calculus (AP, College)</li>
+              <li>Statistics & Probability</li>
+              <li>SAT/ACT/AMC Math Prep</li>
+            </ul>
           </div>
           <div className="subject-card">
+            <div className="subject-icon cs-icon">&lt;/&gt;</div>
             <h3>Computer Science</h3>
-            <p>Programming, algorithms, and web development</p>
+            <ul>
+              <li>Programming (Python, Java)</li>
+              <li>Data Structures & Algorithms</li>
+              <li>Web Development</li>
+              <li>AI & Machine Learning</li>
+            </ul>
           </div>
         </div>
       </section>
 
       <section className="why-us">
-        <h2>Why Choose Us?</h2>
-        <div className="features">
-          <div className="feature">
-            <h3>Experienced Tutors</h3>
-            <p>Our tutors are experts in their fields with proven track records</p>
+        <div className="section-header">
+          <h2>Why Choose Us?</h2>
+          <p>Experience the Scholarly difference</p>
+        </div>
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="feature-icon">👨‍🏫</div>
+            <h3>Expert Tutors</h3>
+            <p>Berkeley graduates with years of teaching experience and industry expertise</p>
           </div>
-          <div className="feature">
-            <h3>Personalized Approach</h3>
-            <p>Customized learning plans tailored to your needs</p>
+          <div className="feature-card">
+            <div className="feature-icon">🎯</div>
+            <h3>Tailored Learning</h3>
+            <p>Customized curriculum and teaching methods adapted to your learning style</p>
           </div>
-          <div className="feature">
-            <h3>Flexible Schedule</h3>
-            <p>Sessions that fit your busy lifestyle</p>
+          <div className="feature-card">
+            <div className="feature-icon">📈</div>
+            <h3>Proven Results</h3>
+            <p>Track record of improving grades and building a lasting foundation</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">⏰</div>
+            <h3>Flexible Scheduling</h3>
+            <p>Convenient online and in-person sessions that fit your busy schedule</p>
           </div>
         </div>
       </section>

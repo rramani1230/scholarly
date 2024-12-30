@@ -12,17 +12,21 @@
 }
 
 .about-header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
+  font-size: 48px;
   font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: -0.5px;
 }
 
 .about-header .subtitle {
-  font-size: 1.5rem;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 30px;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .mission-statement {
@@ -54,35 +58,28 @@
 
 .founders {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
-  margin-top: 40px;
+  margin: 40px auto;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0 20px;
 }
 
 .founder-card {
   background: white;
-  border-radius: 12px;
-  padding: 30px;
-  margin: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
-  justify-content: flex-start;
 }
 
 .founder-image {
-  width: 250px;
-  height: 250px;
-  margin: 0 auto 20px;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 24px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -102,37 +99,44 @@
 
 .founder-card h3 {
   color: #2c3e50;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .founder-card .title {
   color: #3498db;
-  font-weight: bold;
-  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
 .founder-card .bio {
   text-align: left;
-  flex-grow: 1;
-  margin: 20px 0;
+  margin: 0 0 24px;
   line-height: 1.6;
-  color: #444;
-  padding: 0 20px;
+  color: #64748b;
+  font-size: 16px;
+  flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .credentials {
-  margin-top: 20px;
-  padding: 15px;
+  width: 100%;
+  margin-top: auto;
+  padding: 20px;
   background: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .credentials p {
-  margin: 10px 0;
+  margin: 8px 0;
   color: #2c3e50;
   font-weight: 500;
+  font-size: 15px;
+  text-align: left;
 }
 
 .mission-section {
@@ -150,32 +154,84 @@
 }
 
 .values-section {
+  padding: 80px 20px;
+  background: var(--background-light);
+}
+
+.values-section h2 {
   text-align: center;
-  padding: 60px 30px;
+  font-size: 40px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
 }
 
 .values-grid {
+  max-width: 1200px;
+  margin: 40px auto 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  margin-top: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 20px;
 }
 
 .value-card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
   text-align: center;
-  padding: 30px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.value-card:active {
+  transform: scale(0.98);
+}
+
+.value-card::before {
+  content: '';
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.value-card:nth-child(1)::before {
+  content: '💼';
+}
+
+.value-card:nth-child(2)::before {
+  content: '🌉';
+}
+
+.value-card:nth-child(3)::before {
+  content: '🎯';
+}
+
+.value-card:nth-child(4)::before {
+  content: '💻';
 }
 
 .value-card h3 {
-  color: #3498db;
-  margin-bottom: 15px;
+  font-size: 20px;
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .value-card p {
-  text-align: center;
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
 }
 
 h2 {
@@ -198,5 +254,44 @@ h2 {
   .mission-section,
   .values-section {
     padding: 50px 30px;
+  }
+
+  .values-section {
+    padding: 60px 20px;
+  }
+
+  .values-section h2 {
+    font-size: 32px;
+  }
+
+  .values-grid {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .value-card {
+    padding: 24px;
+  }
+
+  .value-card::before {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .founders {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+
+  .founder-card {
+    padding: 30px;
+  }
+
+  .founder-image {
+    width: 180px;
+    height: 180px;
   }
 }
