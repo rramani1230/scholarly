@@ -61,7 +61,7 @@ const Contact = () => {
           
           <div className="info-item">
             <h3>San Francisco Location</h3>
-            <p>388 Fulton St #513</p>
+            <p>388 Fulton St #613</p>
             <p>San Francisco, CA</p>
             <p className="contact-number">(650) 495-4958</p>
           </div>
