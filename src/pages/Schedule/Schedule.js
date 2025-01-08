@@ -3,6 +3,9 @@ import './Schedule.css';
 
 const Schedule = () => {
   useEffect(() => {
+    // Scroll to top
+    window.scrollTo(0, 0);
+
     // Load Calendly widget script
     const script = document.createElement('script');
     script.src = 'https://calendly.com/assets/external/widget.js';

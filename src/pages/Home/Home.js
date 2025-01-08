@@ -51,23 +51,24 @@ const Home = () => {
           <p>Experience the Scholarly difference</p>
         </div>
         <div className="features-grid">
-          <Link to="/about" className="feature-card">
-            <div className="feature-icon">👨‍🏫</div>
+          <Link to='/about' className='feature-card' onClick={() => window.scrollTo(0, 0)}>
+            <div className='feature-icon'>👨‍🏫</div>
             <h3>Expert Tutors</h3>
             <p>Berkeley graduates with years of teaching experience and industry expertise</p>
           </Link>
-          <div className="feature-card">
-            <div className="feature-icon">🎯</div>
+          <Link to='/contact' className='feature-card' onClick={() => window.scrollTo(0, 0)}>
+            <div className='feature-icon'>🎯</div>
             <h3>Tailored Learning</h3>
             <p>Customized curriculum and teaching methods adapted to your learning style</p>
-          </div>
-          <div className="feature-card">
-            <div className="feature-icon">📈</div>
+          </Link>
+          <Link to='/contact' className='feature-card' onClick={() => window.scrollTo(0, 0)}>
+            <div className='feature-icon'>📈</div>
             <h3>Proven Results</h3>
             <p>Track record of improving grades and building a lasting foundation</p>
-          </div>
-          <Link to="/contact" className="feature-card">
-            <div className="feature-icon">⏰</div>
+            {/* TODO: Link to testimonials in the future */}
+          </Link>
+          <Link to='/schedule' className='feature-card' onClick={() => window.scrollTo(0, 0)}>
+            <div className='feature-icon'>⏰</div>
             <h3>Flexible Scheduling</h3>
             <p>Convenient online and in-person sessions that fit your busy schedule</p>
           </Link>
