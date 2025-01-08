@@ -51,11 +51,11 @@ const Home = () => {
           <p>Experience the Scholarly difference</p>
         </div>
         <div className="features-grid">
-          <div className="feature-card">
+          <Link to="/about" className="feature-card">
             <div className="feature-icon">👨‍🏫</div>
             <h3>Expert Tutors</h3>
             <p>Berkeley graduates with years of teaching experience and industry expertise</p>
-          </div>
+          </Link>
           <div className="feature-card">
             <div className="feature-icon">🎯</div>
             <h3>Tailored Learning</h3>
@@ -66,11 +66,11 @@ const Home = () => {
             <h3>Proven Results</h3>
             <p>Track record of improving grades and building a lasting foundation</p>
           </div>
-          <div className="feature-card">
+          <Link to="/contact" className="feature-card">
             <div className="feature-icon">⏰</div>
             <h3>Flexible Scheduling</h3>
             <p>Convenient online and in-person sessions that fit your busy schedule</p>
-          </div>
+          </Link>
         </div>
       </section>
     </div>
